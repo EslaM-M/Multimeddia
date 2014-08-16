@@ -1,0 +1,9 @@
+c:\users\eslam\documents\visual studio 2013\Projects\MultimediaProject\MultimediaProject\obj\Debug\MultimediaProject.Form1.resources
+c:\users\eslam\documents\visual studio 2013\Projects\MultimediaProject\MultimediaProject\obj\Debug\MultimediaProject.Properties.Resources.resources
+c:\users\eslam\documents\visual studio 2013\Projects\MultimediaProject\MultimediaProject\obj\Debug\MultimediaProject.csproj.GenerateResource.Cache
+C:\Users\eslam\Documents\Visual Studio 2013\Projects\MultimediaProject\MultimediaProject\bin\Debug\MultimediaProject.exe.config
+C:\Users\eslam\Documents\Visual Studio 2013\Projects\MultimediaProject\MultimediaProject\bin\Debug\MultimediaProject.exe
+C:\Users\eslam\Documents\Visual Studio 2013\Projects\MultimediaProject\MultimediaProject\bin\Debug\MultimediaProject.pdb
+C:\Users\eslam\Documents\Visual Studio 2013\Projects\MultimediaProject\MultimediaProject\obj\Debug\MultimediaProject.exe
+C:\Users\eslam\Documents\Visual Studio 2013\Projects\MultimediaProject\MultimediaProject\obj\Debug\MultimediaProject.pdb
+C:\Users\eslam\Documents\Visual Studio 2013\Projects\MultimediaProject\MultimediaProject\obj\Debug\MultimediaProject.csprojResolveAssemblyReference.cache
