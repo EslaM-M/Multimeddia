@@ -31,15 +31,22 @@ namespace MultimediaProject
          {
 
          }
-          
-         public void Rotation()
-         {
-             //create an empty Bitmap image
-             image.RotateFlip(RotateFlipType.Rotate180FlipY);
-             this.picturebox.Image = this.image;
-           
-      
-         }
+
+        public Bitmap Rotation()
+        {
+            //create an empty Bitmap image
+            Color[,] color = this.GetImageMatrix((Bitmap)this.image);
+            Bitmap bit = new Bitmap(color.GetLength(0), color.GetLength(1), System.Drawing.Imaging.PixelFormat.Format48bppRgb);
+            for (int i = 0; i < color.GetLength(0); i++)
+            {
+                for (int j = 0; j < color.GetLength(1); j++)
+                {
+                    bit.SetPixel(i, j, color[color.GetLength(0) - i - 1, color.GetLength(1) - j - 1]);
+                }
+            }
+            return bit;
+        }
+
 
       public Color[,] GetImageMatrix(Bitmap bitmap)
          {
