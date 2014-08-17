@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNormal = new System.Windows.Forms.PictureBox();
             this.LoadImage = new System.Windows.Forms.Button();
             this.Rotate = new System.Windows.Forms.Button();
             this.Zoom = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBoxTransformed = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransformed)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxNormal
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 322);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxNormal.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxNormal.Name = "pictureBoxNormal";
+            this.pictureBoxNormal.Size = new System.Drawing.Size(354, 322);
+            this.pictureBoxNormal.TabIndex = 0;
+            this.pictureBoxNormal.TabStop = false;
+            this.pictureBoxNormal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxNormal_MouseClick);
             // 
             // LoadImage
             // 
@@ -74,13 +75,13 @@
             this.Zoom.Text = "Zoom";
             this.Zoom.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // pictureBoxTransformed
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(400, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(345, 310);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxTransformed.Location = new System.Drawing.Point(400, 12);
+            this.pictureBoxTransformed.Name = "pictureBoxTransformed";
+            this.pictureBoxTransformed.Size = new System.Drawing.Size(345, 310);
+            this.pictureBoxTransformed.TabIndex = 4;
+            this.pictureBoxTransformed.TabStop = false;
             // 
             // Form1
             // 
@@ -88,26 +89,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(757, 465);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBoxTransformed);
             this.Controls.Add(this.Zoom);
             this.Controls.Add(this.Rotate);
             this.Controls.Add(this.LoadImage);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxNormal);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransformed)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxNormal;
         private System.Windows.Forms.Button LoadImage;
         private System.Windows.Forms.Button Rotate;
         private System.Windows.Forms.Button Zoom;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxTransformed;
     }
 }
 

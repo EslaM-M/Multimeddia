@@ -43,6 +43,7 @@ namespace MultimediaProject
 
       public Color[,] GetImageMatrix(Bitmap bitmap)
          {
+          
              Color[,] imagematrix = new Color[bitmap.Width, bitmap.Height];
 
              for (int x = 0; x < bitmap.Width; x++)
@@ -57,7 +58,22 @@ namespace MultimediaProject
          }
 
          
+      public Color[,] Crop(Rectangle croppedRectangle)
+      {
+          Color[,] croppedMatrix = new Color[croppedRectangle.Width, croppedRectangle.Height];
+          
+          var imageMatrix = GetImageMatrix((Bitmap)image);
 
+          for (int row = croppedRectangle.X, i = 0; row < croppedRectangle.Width; row++, i++)
+          {
+              for (int col = croppedRectangle.Y, j = 0; col < croppedRectangle.Height; col++, j++)
+              {
+                  croppedMatrix[i, j] = imageMatrix[row, col];
+              }
+          }
+
+          return croppedMatrix;
+      }
 
 
     }

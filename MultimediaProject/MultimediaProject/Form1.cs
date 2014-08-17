@@ -24,7 +24,8 @@ namespace MultimediaProject
             if (openfile.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(openfile.FileName);
-                processor = new ImageProcessor(image,pictureBox1);
+                processor = new ImageProcessor(image,pictureBoxNormal);
+                drawMatrix(processor.GetImageMatrix((Bitmap)image));
             }
         
         }
@@ -41,8 +42,38 @@ namespace MultimediaProject
                     bit.SetPixel(i, j, color[i, j]);
                 }
             }
-            pictureBox2.Image = bit;
+            pictureBoxTransformed.Image = bit;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drawMatrix(Color[,] pixels)
+        {
+            int width = pixels.GetLength(0);
+            int height = pixels.GetLength(1);
+
+            Bitmap image = new Bitmap(width, height);
+            for (int row = 0; row < width; row++)
+            {
+                for (int col = 0; col < height; col++)
+                {
+                    image.SetPixel(row, col, pixels[row, col]);
+                }
+            }
+
+            pictureBoxTransformed.Image = image;
+        }
+
+        private void pictureBoxNormal_MouseClick(object sender, MouseEventArgs e)
+        {
+            Rectangle cropRectangle = new Rectangle(e.X, e.Y, 200, 250);
+            var cropped = processor.Crop(cropRectangle);
+            drawMatrix(cropped);
+        }
+
 
     }
 }
