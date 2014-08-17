@@ -64,9 +64,9 @@ namespace MultimediaProject
           
           var imageMatrix = GetImageMatrix((Bitmap)image);
 
-          for (int row = croppedRectangle.X, i = 0; row < croppedRectangle.Width; row++, i++)
+          for (int row = croppedRectangle.X, i = 0; i < croppedRectangle.Width; row++, i++)
           {
-              for (int col = croppedRectangle.Y, j = 0; col < croppedRectangle.Height; col++, j++)
+              for (int col = croppedRectangle.Y, j = 0; j < croppedRectangle.Height; col++, j++)
               {
                   croppedMatrix[i, j] = imageMatrix[row, col];
               }

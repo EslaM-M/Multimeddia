@@ -44,7 +44,8 @@
             this.pictureBoxNormal.Size = new System.Drawing.Size(354, 322);
             this.pictureBoxNormal.TabIndex = 0;
             this.pictureBoxNormal.TabStop = false;
-            this.pictureBoxNormal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxNormal_MouseClick);
+            this.pictureBoxNormal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxNormal_MouseDown);
+            this.pictureBoxNormal.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxNormal_MouseUp);
             // 
             // LoadImage
             // 

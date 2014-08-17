@@ -13,6 +13,10 @@ namespace MultimediaProject
     public partial class Form1 : Form
     {
         ImageProcessor processor;
+        
+       //draw rectangle for cropping fields
+        Rectangle _cropRectangle = new Rectangle(-1, -1, 0, 0);
+
         public Form1()
         {
             InitializeComponent();
@@ -67,11 +71,19 @@ namespace MultimediaProject
             pictureBoxTransformed.Image = image;
         }
 
-        private void pictureBoxNormal_MouseClick(object sender, MouseEventArgs e)
+        private void pictureBoxNormal_MouseDown(object sender, MouseEventArgs e)
         {
-            Rectangle cropRectangle = new Rectangle(e.X, e.Y, 200, 250);
-            var cropped = processor.Crop(cropRectangle);
-            drawMatrix(cropped);
+            _cropRectangle.X = e.X;
+            _cropRectangle.Y = e.Y;
+            
+        }
+
+        private void pictureBoxNormal_MouseUp(object sender, MouseEventArgs e)
+        {
+            _cropRectangle.Width = e.X - _cropRectangle.X;
+            _cropRectangle.Height = e.Y - _cropRectangle.Y;
+            var croppedMatrix = processor.Crop(_cropRectangle);
+            drawMatrix(croppedMatrix);
         }
 
 
