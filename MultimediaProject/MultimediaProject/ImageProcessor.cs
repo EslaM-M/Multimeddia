@@ -5,15 +5,16 @@ namespace MultimediaProject
 {
   public  class ImageProcessor
     {
-        Image image;
+      public  Image image;
         PictureBox picturebox;
-   
+        
         public ImageProcessor(Image image,PictureBox picturebox)
         {
             this.picturebox = picturebox;
             this.picturebox.Image = image;
             // TODO: Complete member initialization
             this.image = image;
+            
         }
 
          public void ZoomIn()
@@ -36,7 +37,25 @@ namespace MultimediaProject
              //create an empty Bitmap image
              image.RotateFlip(RotateFlipType.Rotate180FlipY);
              this.picturebox.Image = this.image;
+           
+      
          }
+
+      public Color[,] GetImageMatrix(Bitmap bitmap)
+         {
+             Color[,] imagematrix = new Color[bitmap.Width, bitmap.Height];
+
+             for (int x = 0; x < bitmap.Width; x++)
+             {
+                 for (int y = 0; y < bitmap.Height; y++)
+                 {
+                    imagematrix[x,y] = bitmap.GetPixel(x, y);
+                 }
+             }
+
+             return imagematrix;
+         }
+
          
 
 

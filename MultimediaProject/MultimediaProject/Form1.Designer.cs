@@ -32,14 +32,16 @@
             this.LoadImage = new System.Windows.Forms.Button();
             this.Rotate = new System.Windows.Forms.Button();
             this.Zoom = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(759, 393);
+            this.pictureBox1.Size = new System.Drawing.Size(354, 322);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -72,12 +74,21 @@
             this.Zoom.Text = "Zoom";
             this.Zoom.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(400, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(345, 310);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(757, 465);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Zoom);
             this.Controls.Add(this.Rotate);
             this.Controls.Add(this.LoadImage);
@@ -85,6 +96,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button LoadImage;
         private System.Windows.Forms.Button Rotate;
         private System.Windows.Forms.Button Zoom;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
