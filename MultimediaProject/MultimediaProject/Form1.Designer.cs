@@ -75,6 +75,7 @@
             this.Zoom.TabIndex = 3;
             this.Zoom.Text = "Zoom";
             this.Zoom.UseVisualStyleBackColor = true;
+            this.Zoom.Click += new System.EventHandler(this.Zoom_Click);
             // 
             // pictureBoxTransformed
             // 
