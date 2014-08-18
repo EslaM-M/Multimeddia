@@ -85,6 +85,23 @@ namespace MultimediaProject
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Color[,] color = processor.GetImageMatrix((Bitmap)processor.image);
+            Color[,] resize = new Color[color.GetLength(0) + 200, color.GetLength(1) + 200];
+            int x_ratio = resize.GetLength(0)/ color.GetLength(0) ;
+            int y_ratio =  resize.GetLength(1)/color.GetLength(1) ;
+            int px, py;
+            for(int i = 0,orx=0;i<resize.GetLength(0)&&orx<color.GetLength(0);i+=x_ratio,orx++)
+            {
+                for(int j = 0,ory=0;j<resize.GetLength(1)&&ory<color.GetLength(1);j+=y_ratio,ory++)
+                {
+                    resize[i, j] = color[orx, ory];
+                }
+            }
+            drawMatrix(resize);
+        }
+
 
     }
 }

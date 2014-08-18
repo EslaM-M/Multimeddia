@@ -33,6 +33,7 @@
             this.Rotate = new System.Windows.Forms.Button();
             this.Zoom = new System.Windows.Forms.Button();
             this.pictureBoxTransformed = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransformed)).BeginInit();
             this.SuspendLayout();
@@ -85,12 +86,23 @@
             this.pictureBoxTransformed.TabIndex = 4;
             this.pictureBoxTransformed.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(400, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 42);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(757, 465);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBoxTransformed);
             this.Controls.Add(this.Zoom);
             this.Controls.Add(this.Rotate);
@@ -112,6 +124,7 @@
         private System.Windows.Forms.Button Rotate;
         private System.Windows.Forms.Button Zoom;
         private System.Windows.Forms.PictureBox pictureBoxTransformed;
+        private System.Windows.Forms.Button button1;
     }
 }
 
